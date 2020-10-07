@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { LoggingService } from '../logging.service';
+// import { LoggingService } from '../logging.service';
 
 import { SharedModule } from '../shared/shared.module';
 
