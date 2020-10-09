@@ -16,6 +16,14 @@ export class DropdownDirective implements OnInit {
 
   ngOnInit(): void {}
 
+  @HostListener('document:click', ['$event']) onDocumentClick(
+    event: Event
+  ): void {
+    if (event.target !== this.elementRef.nativeElement && this.isOpen) {
+      this.elementRef.nativeElement.click();
+    }
+  }
+
   @HostListener('click') toggleOpen(): void {
     this.isOpen = !this.isOpen;
 
